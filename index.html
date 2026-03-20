@@ -3,87 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VIBE+ | Study Energy Patch - Boost Your Style</title>
-    <link rel="stylesheet" href="style.css">
+    <title>VIBE+ | Study Energy Patch - VIP PRO MAX</title>
+    <!-- Font chữ hiện đại -->
     <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Icon cho các nút liên hệ -->
+    <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body>
-    <!-- Thanh Menu -->
     <nav>
         <div class="logo">VIBE<span>+</span></div>
         <ul>
-            <li><a href="#sanpham">Sản phẩm</a></li>
+            <li><a href="#sanpham">Cửa hàng</a></li>
+            <li><a href="#thanhphan">Thành phần</a></li>
             <li><a href="#feedback">Đánh giá</a></li>
-            <li><a href="#" class="btn-small">Zalo Hỗ Trợ</a></li>
+            <li><a href="tel:090xxxxxxx" class="btn-small"><i class="fas fa-phone"></i> Hotline</a></li>
         </ul>
     </nav>
 
-    <!-- Phần Đăng nhập/Đầu trang -->
     <section class="hero">
         <div class="content">
             <div class="flash-sale">
                 <span>⚡ FLASH SALE KẾT THÚC SAU:</span>
                 <span id="countdown">02:00:00</span>
             </div>
-            <h1>Welcome to <span>VIBE+</span></h1>
-            <p class="slogan">“Boost Your Style, Unbox Your Mind”</p>
-            
-            <div class="price-box">
-                <span class="old-price">150.000đ</span>
-                <span class="new-price">119.000đ</span>
-                <span class="discount">-21%</span>
-            </div>
-
-            <p class="description">Miếng dán năng lượng thế hệ mới giúp bạn tập trung 100% công suất học tập, tỉnh táo tức thì không cần Cafein lỏng.</p>
-            
-            <a href="https://zalo.me" class="btn-buy">MUA NGAY (FREESHIP TẬN GIƯỜNG)</a>
-            <p style="margin-top:10px; font-size:12px; color:#aaa;">⭐ 4.9/5 | 1.2k Đã bán trên Shopee</p>
+            <h1>ENERGY <span>PATCH</span></h1>
+            <p class="slogan">“Tỉnh táo tức thì - Thống trị mùa thi”</p>
+            <p class="description">Công nghệ thẩm thấu qua da (Transdermal) giúp duy trì năng lượng bền bỉ suốt 8-12 tiếng. Không gây cồn cào dạ dày, không lo mất ngủ đột ngột.</p>
+            <a href="#sanpham" class="btn-buy">MUA NGAY - FREESHIP</a>
         </div>
+    </section>
 
-        <!-- 3 Phiên bản sản phẩm -->
-        <div class="product-grid" id="sanpham">
-            <h3>CHỌN PHONG CÁCH CỦA BẠN</h3>
-            <div class="gallery">
-                <div class="item">
-                    <img src="1.jpg" alt="Vibe Basic">
-                    <p>BASIC BLUE</p>
+    <!-- 6 LOẠI SẢN PHẨM (GRID 3x2) -->
+    <section id="sanpham" class="products-section">
+        <h2 class="section-title">6 PHIÊN BẢN ĐỘC QUYỀN</h2>
+        <div class="product-grid">
+            <!-- Sản phẩm 1-6 (Lặp lại cấu trúc này) -->
+            <div class="product-card">
+                <div class="badge">Bán chạy</div>
+                <img src="1.jpg" alt="Basic Blue">
+                <h4>BASIC BLUE</h4>
+                <div class="price-tag">
+                    <span class="old-p">150k</span> <span class="new-p">119k</span>
                 </div>
-                <div class="item">
-                    <img src="2.jpg" alt="Vibe Neutral">
-                    <p>NEUTRAL</p>
-                </div>
-                <div class="item">
-                    <img src="3.jpg" alt="Vibe B&W">
-                    <p>BLACK & WHITE</p>
-                </div>
+                <button class="add-to-cart">Thêm vào giỏ</button>
+            </div>
+            <div class="product-card">
+                <img src="2.jpg" alt="Neutral">
+                <h4>NEUTRAL SOFT</h4>
+                <div class="price-tag"><span class="old-p">150k</span> <span class="new-p">119k</span></div>
+                <button class="add-to-cart">Thêm vào giỏ</button>
+            </div>
+            <div class="product-card">
+                <img src="3.jpg" alt="Black White">
+                <h4>B&W CLASSIC</h4>
+                <div class="price-tag"><span class="old-p">150k</span> <span class="new-p">119k</span></div>
+                <button class="add-to-cart">Thêm vào giỏ</button>
+            </div>
+            <div class="product-card">
+                <img src="1.jpg" alt="Limited">
+                <h4>LIMITED RED</h4>
+                <div class="price-tag"><span class="old-p">180k</span> <span class="new-p">149k</span></div>
+                <button class="add-to-cart">Thêm vào giỏ</button>
+            </div>
+            <div class="product-card">
+                <img src="2.jpg" alt="Focus">
+                <h4>ULTRA FOCUS</h4>
+                <div class="price-tag"><span class="old-p">160k</span> <span class="new-p">129k</span></div>
+                <button class="add-to-cart">Thêm vào giỏ</button>
+            </div>
+            <div class="product-card">
+                <img src="3.jpg" alt="Night">
+                <h4>NIGHT OWL</h4>
+                <div class="price-tag"><span class="old-p">150k</span> <span class="new-p">119k</span></div>
+                <button class="add-to-cart">Thêm vào giỏ</button>
             </div>
         </div>
     </section>
 
-    <!-- Phần Chi tiết & Feedback -->
-    <section class="details-section">
-        <details>
-            <summary>🌿 THÀNH PHẦN NGUYÊN LIỆU (Bấm xem)</summary>
-            <p>Chiết xuất trà xanh, Vitamin B12, Bạc hà tự nhiên. An toàn, không gây kích ứng da, tác dụng kéo dài 8 tiếng.</p>
-        </details>
-
-        <div id="feedback" class="feedback-area">
-            <h3>KHÁCH HÀNG NÓI GÌ?</h3>
-            <div class="review-card">
-                <b>Nguyễn Văn A:</b> "Dán cái tỉnh táo học bài tới sáng luôn bà ơi, xịn thực sự!" ⭐⭐⭐⭐⭐
+    <!-- THÀNH PHẦN (Vip Pro) -->
+    <section id="thanhphan" class="ingredients">
+        <h2 class="section-title">GIẢI MÃ THÀNH PHẦN</h2>
+        <div class="ingred-container">
+            <div class="ingred-item">
+                <i class="fas fa-bolt"></i>
+                <p><b>Caffeine & Trà xanh:</b> Năng lượng sạch, tập trung sâu, không lo âu.</p>
             </div>
-            <div class="review-card">
-                <b>Trần Thị B:</b> "Màu xanh Basic đẹp xỉu, dán như phụ kiện thời trang luôn." ⭐⭐⭐⭐⭐
+            <div class="ingred-item">
+                <i class="fas fa-brain"></i>
+                <p><b>Taurine:</b> Tăng cường hiệu suất trí não vượt trội.</p>
+            </div>
+            <div class="ingred-item">
+                <i class="fas fa-capsules"></i>
+                <p><b>Vitamin B Complex:</b> Cung cấp sức bền, không gây "sụp nguồn" đột ngột.</p>
             </div>
         </div>
     </section>
+
+    <!-- FEEDBACK -->
+    <section id="feedback" class="feedback-section">
+        <h2 class="section-title">FEEDBACK TỪ HỌC VIÊN</h2>
+        <div class="feedback-container">
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Dán cái là học bài thông đêm được luôn, màu đẹp như sticker ấy!"</p>
+                <b>- Lan Anh (FTU)</b>
+            </div>
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Không bị say như uống cafe, cực kỳ tiện lợi cho mùa thi."</p>
+                <b>- Minh Quân (HUST)</b>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nút liên hệ nổi (Zalo/TikTok/FB) -->
+    <div class="social-contact">
+        <a href="#" class="social-item fb"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-item tt"><i class="fab fa-tiktok"></i></a>
+        <a href="#" class="social-item zalo">Zalo</a>
+    </div>
 
     <footer>
-        <p>&copy; 2026 VIBE+ Official Store</p>
+        <p>&copy; 2026 VIBE+ Official Store - Thiết kế bởi Nhóm VIP PRO MAX</p>
     </footer>
 
-    <!-- Code cho đồng hồ đếm ngược -->
     <script>
+        // Copy script đếm ngược của bạn vào đây
         function startTimer(duration, display) {
             var timer = duration, hours, minutes, seconds;
             setInterval(function () {
@@ -94,10 +140,8 @@
                 if (--timer < 0) timer = duration;
             }, 1000);
         }
-        window.onload = function () {
-            startTimer(7200, document.querySelector('#countdown'));
-        };
+        window.onload = function () { startTimer(7200, document.querySelector('#countdown')); };
     </script>
 </body>
 </html>
-    
+   
