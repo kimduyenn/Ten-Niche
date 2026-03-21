@@ -1,127 +1,162 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VIBE+ Energy Patch</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- FONT -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>VIBE+ Energy Patch</title>
 
-    <!-- ICON -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <!-- NAV -->
 <nav>
-    <div class="logo">VIBE+</div>
-    <ul>
-        <li><a href="#sanpham">Sản phẩm</a></li>
-        <li><a href="#thanhphan">Thành phần</a></li>
-        <li><a href="#feedback">Đánh giá</a></li>
-        <li class="cart"><i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)</li>
-    </ul>
+<div class="logo">VIBE+</div>
+
+<ul>
+<li onclick="setLang('vi')">🇻🇳</li>
+<li onclick="setLang('en')">🇺🇸</li>
+<li>🛒 <span id="cart-count">0</span></li>
+</ul>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-    <div class="flash-sale">⚡ FLASH SALE: <span id="countdown">02:00:00</span></div>
-    <h1>ENERGY PATCH</h1>
-    <p>Boost your focus – học xuyên deadline</p>
-    <a href="#sanpham" class="btn">Mua ngay</a>
+<h1>ENERGY PATCH</h1>
+<p>Boost Focus - No Crash</p>
+<div class="flash">⚡ <span id="countdown">02:00:00</span></div>
 </section>
 
 <!-- PRODUCTS -->
-<section id="sanpham" class="products">
-    <h2>SẢN PHẨM</h2>
+<section class="products">
+<h2>SẢN PHẨM</h2>
 
-    <div class="grid">
+<div class="grid">
 
-        <!-- PRODUCT -->
-        <div class="card">
-            <div class="heart" onclick="toggleLike(this)">❤</div>
-            <img src="Basic.jpg">
-            <h3>VIBE+ BASIC</h3>
-            <p class="price">119k</p>
-            <button onclick="openCheckout('VIBE+ BASIC','119k')">Mua</button>
-        </div>
+<!-- 6 sản phẩm -->
+<div class="card" onclick="openDetail('BASIC')">
+<img src="Basic.jpg">
+<h3>BASIC</h3>
+<div class="rating">★★★★★ (1.2k)</div>
+<p class="old">150k</p>
+<p class="price">119k</p>
+</div>
 
-        <div class="card">
-            <div class="heart" onclick="toggleLike(this)">❤</div>
-            <img src="Black_White.jpg">
-            <h3>BLACK & WHITE</h3>
-            <p class="price">119k</p>
-            <button onclick="openCheckout('BLACK & WHITE','119k')">Mua</button>
-        </div>
+<div class="card" onclick="openDetail('BLACK & WHITE')">
+<img src="Black_White.jpg">
+<h3>BLACK & WHITE</h3>
+<div class="rating">★★★★★ (980)</div>
+<p class="old">150k</p>
+<p class="price">119k</p>
+</div>
 
-        <div class="card">
-            <div class="heart" onclick="toggleLike(this)">❤</div>
-            <img src="Monochrome.jpg">
-            <h3>MONOCHROME</h3>
-            <p class="price">119k</p>
-            <button onclick="openCheckout('MONOCHROME','119k')">Mua</button>
-        </div>
+<div class="card" onclick="openDetail('MONOCHROME')">
+<img src="Monochrome.jpg">
+<h3>MONOCHROME</h3>
+<div class="rating">★★★★★ (760)</div>
+<p class="old">150k</p>
+<p class="price">119k</p>
+</div>
 
-        <div class="card">
-            <div class="heart" onclick="toggleLike(this)">❤</div>
-            <img src="Muted.jpg">
-            <h3>MUTED</h3>
-            <p class="price">119k</p>
-            <button onclick="openCheckout('MUTED','119k')">Mua</button>
-        </div>
+<div class="card" onclick="openDetail('MUTED')">
+<img src="Muted.jpg">
+<h3>MUTED</h3>
+<div class="rating">★★★★★ (540)</div>
+<p class="old">150k</p>
+<p class="price">119k</p>
+</div>
 
-        <div class="card">
-            <div class="heart" onclick="toggleLike(this)">❤</div>
-            <img src="Neutral.jpg">
-            <h3>NEUTRAL</h3>
-            <p class="price">119k</p>
-            <button onclick="openCheckout('NEUTRAL','119k')">Mua</button>
-        </div>
+<div class="card" onclick="openDetail('NEUTRAL')">
+<img src="Neutral.jpg">
+<h3>NEUTRAL</h3>
+<div class="rating">★★★★★ (600)</div>
+<p class="old">150k</p>
+<p class="price">119k</p>
+</div>
 
-        <div class="card">
-            <div class="heart" onclick="toggleLike(this)">❤</div>
-            <img src="Pastel.jpg">
-            <h3>PASTEL</h3>
-            <p class="price">119k</p>
-            <button onclick="openCheckout('PASTEL','119k')">Mua</button>
-        </div>
+<div class="card" onclick="openDetail('PASTEL')">
+<img src="Pastel.jpg">
+<h3>PASTEL</h3>
+<div class="rating">★★★★★ (1.5k)</div>
+<p class="old">150k</p>
+<p class="price">119k</p>
+</div>
 
-    </div>
+</div>
 </section>
 
-<!-- INGREDIENT -->
-<section id="thanhphan" class="info">
-    <h2>THÀNH PHẦN</h2>
-    <p>Caffeine – tăng tập trung</p>
-    <p>Taurine – tăng hiệu suất</p>
-    <p>Vitamin B – năng lượng dài lâu</p>
+<!-- COMBO -->
+<section class="products">
+<h2>🔥 COMBO TIẾT KIỆM</h2>
+
+<div class="grid">
+
+<div class="card combo" onclick="buyCombo('Combo 2','229k')">
+<span class="badge">-25%</span>
+<img src="1.jpg">
+<h3>Combo 2 sản phẩm</h3>
+<div class="rating">★★★★★ (2k)</div>
+<p class="old">300k</p>
+<p class="price">229k</p>
+</div>
+
+<div class="card combo" onclick="buyCombo('Combo 3','299k')">
+<span class="badge">Best Seller</span>
+<img src="2.jpg">
+<h3>Combo 3 sản phẩm</h3>
+<div class="rating">★★★★★ (3.2k)</div>
+<p class="old">450k</p>
+<p class="price">299k</p>
+</div>
+
+<div class="card combo" onclick="buyCombo('Full Set','499k')">
+<span class="badge gold">VIP</span>
+<img src="3.jpg">
+<h3>Full Set 6 loại</h3>
+<div class="rating">★★★★★ (5k)</div>
+<p class="old">900k</p>
+<p class="price">499k</p>
+</div>
+
+</div>
 </section>
 
-<!-- FEEDBACK -->
-<section id="feedback" class="info">
-    <h2>ĐÁNH GIÁ</h2>
-    <p>⭐⭐⭐⭐⭐ "Học xuyên đêm luôn!"</p>
+<!-- VIDEO -->
+<section class="video">
+<h2>🎥 TikTok Review</h2>
+
+<div class="fake-video">
+▶
+<p>Review thực tế</p>
+</div>
 </section>
 
 <!-- MODAL -->
 <div id="modal" class="modal">
-    <div class="modal-content">
-        <span onclick="closeModal()" class="close">&times;</span>
-        <h3 id="product-name"></h3>
-        <p id="product-price"></p>
-        <input placeholder="Tên của bạn">
-        <input placeholder="SĐT">
-        <button onclick="confirmOrder()">Xác nhận</button>
-    </div>
+<div class="modal-content">
+
+<span onclick="closeDetail()">✖</span>
+
+<h2 id="name"></h2>
+
+<p><b>Công dụng:</b></p>
+<p>Tăng tập trung, giảm stress, học 8h</p>
+
+<p><b>Cách dùng:</b></p>
+<p>Bóc → dán → dùng 8h</p>
+
+<button onclick="buyNow()">Mua ngay</button>
+
+</div>
 </div>
 
+<!-- TOAST -->
 <div id="toast"></div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
