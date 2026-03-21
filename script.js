@@ -1,83 +1,86 @@
-let cart=[];
-let total=0;
-
-/* ADD */
-function addToCart(name,price){
-let item=cart.find(i=>i.name===name);
-
-if(item){
-item.qty++;
-}else{
-cart.push({name,price,qty:1});
+body{
+font-family:Poppins;
+margin:0;
+background:#0b1d3a;
+color:white;
 }
 
-updateCart();
+nav{
+display:flex;
+justify-content:space-between;
+padding:15px;
+background:#0b1d3a;
 }
 
-/* UPDATE */
-function updateCart(){
-let html="";
-total=0;
+.logo{color:gold;font-weight:bold;}
 
-cart.forEach(i=>{
-total+=i.price*i.qty;
-
-html+=`
-<div>
-${i.name} x${i.qty}
-<button onclick="changeQty('${i.name}',1)">+</button>
-<button onclick="changeQty('${i.name}',-1)">-</button>
-</div>
-`;
-});
-
-document.getElementById("cart-items").innerHTML=html;
-document.getElementById("total").innerText=total;
-document.getElementById("cart-count").innerText=cart.length;
+.hero{
+text-align:center;
+padding:50px;
+background:linear-gradient(135deg,#0b1d3a,#1e3c72);
 }
 
-/* CHANGE */
-function changeQty(name,val){
-let item=cart.find(i=>i.name===name);
-item.qty+=val;
-if(item.qty<=0){
-cart=cart.filter(i=>i.name!==name);
-}
-updateCart();
+.countdown{
+background:black;
+padding:5px;
+display:inline-block;
 }
 
-/* OPEN CART */
-function openCart(){
-document.getElementById("cartModal").style.display="block";
+.products{
+padding:30px;
 }
 
-function closeCart(){
-document.getElementById("cartModal").style.display="none";
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:15px;
 }
 
-/* DETAIL */
-function openDetail(name,price){
-addToCart(name,price);
+.card{
+background:white;
+color:black;
+padding:10px;
+border-radius:10px;
 }
 
-/* CHECKOUT */
-function checkout(){
-document.getElementById("checkoutModal").style.display="block";
-document.getElementById("final").innerText=total;
+.card img{
+width:100%;
 }
 
-/* CONFIRM */
-function confirmOrder(){
-alert("🎉 Đặt hàng thành công!");
-cart=[];
-updateCart();
+.price{
+color:red;
 }
 
-/* SWIPE smooth */
-document.querySelectorAll('.scroll').forEach(el=>{
-el.addEventListener('wheel', (evt)=>{
-evt.preventDefault();
-el.scrollLeft += evt.deltaY;
-});
-});
-    
+button{
+background:#0b1d3a;
+color:white;
+padding:5px;
+border:none;
+cursor:pointer;
+}
+
+.modal{
+display:none;
+position:fixed;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+}
+
+.modal-content{
+background:white;
+color:black;
+padding:20px;
+margin:100px auto;
+width:300px;
+}
+
+#toast{
+position:fixed;
+bottom:20px;
+right:20px;
+background:black;
+color:white;
+padding:10px;
+display:none;
+}
