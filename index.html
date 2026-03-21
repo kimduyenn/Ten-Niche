@@ -1,115 +1,161 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VIBE+ | Tech-Niche</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIBE+ | Energy Patch - Stay in the Zone</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- NAV -->
+<!-- NAVIGATION -->
 <nav>
-<div class="logo">VIBE+</div>
-
-<ul>
-<li onclick="openCart()">🛒 (<span id="cart-count">0</span>)</li>
-<li><a href="https://www.facebook.com/profile.php?id=61578541236556Ten-Niche" target="_blank">FB</a></li>
-<li><a href="mailto:support@vibeplus.vn">Email</a></li>
-</ul>
+    <div class="logo">VIBE+</div>
+    <ul>
+        <li onclick="openCart()" class="cart-btn">🛒 (<span id="cart-count">0</span>)</li>
+        <li><a href="https://facebook.com" target="_blank">FB</a></li>
+        <li><a href="mailto:support@vibeplus.vn">Email</a></li>
+    </ul>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-<h1>ENERGY PATCH</h1>
-<p>Boost Your Style, Unbox Your Mind</p>
+<!-- HERO SECTION -->
+<header class="hero">
+    <div class="hero-content">
+        <h1>ENERGY PATCH</h1>
+        <p class="tagline">Boost Your Style, Unbox Your Mind</p>
+        <div class="countdown-box">
+            ⚡ Flash Sale ends in: <span id="countdown">02:00:00</span>
+        </div>
+        <button class="cta-main" onclick="document.getElementById('products-grid').scrollIntoView({behavior: 'smooth'})">SHOP NOW</button>
+    </div>
+</header>
 
-<div class="countdown">
-⚡ Flash Sale kết thúc sau: <span id="countdown">02:00:00</span>
-</div>
+<!-- WHY VIBE+ & HOW IT WORKS -->
+<section class="info-section">
+    <div class="container">
+        <h2>Why VIBE+?</h2>
+        <p class="desc">Get 8 hours of steady, distraction-free focus that actually keeps up with your grind. 0 calories, 0 crash - just pure mental flow to help you stay in the zone. <strong>Focus hard. Vibe higher.</strong></p>
+        
+        <div class="how-it-works">
+            <h3>How it works</h3>
+            <p>Our advanced transdermal technology delivers active ingredients directly through the skin into the bloodstream, bypassing the digestive system for a steady, long-lasting energy boost.</p>
+        </div>
+        
+        <div class="steps">
+            <div class="step">
+                <div class="circle">1</div>
+                <p>Peel the patch from the backing sheet</p>
+            </div>
+            <div class="step">
+                <div class="circle">2</div>
+                <p>Place on a hairless area of skin</p>
+            </div>
+            <div class="step">
+                <div class="circle">3</div>
+                <p>Enjoy up to 8 hours of focus</p>
+            </div>
+        </div>
+    </div>
 </section>
 
-<!-- PRODUCTS -->
-<section class="products">
-<h2>SẢN PHẨM</h2>
+<!-- PRODUCTS GRID -->
+<section class="products" id="products-grid">
+    <h2 class="section-title">CHOOSE YOUR STYLE</h2>
+    <div class="grid">
+        <div class="card"><img src="1.jpg"><h3>BASIC</h3><p class="stars">⭐⭐⭐⭐⭐ (1.2k sold)</p><p class="price">119k</p><button onclick="addToCart('BASIC',119)">Add to Cart</button></div>
+        <div class="card"><img src="2.jpg"><h3>BLACK & WHITE</h3><p class="stars">⭐⭐⭐⭐⭐ (900 sold)</p><p class="price">119k</p><button onclick="addToCart('B&W',119)">Add to Cart</button></div>
+        <div class="card"><img src="3.jpg"><h3>MONOCHROME</h3><p class="stars">⭐⭐⭐⭐⭐ (800 sold)</p><p class="price">119k</p><button onclick="addToCart('MONO',119)">Add to Cart</button></div>
+        <div class="card"><img src="4.jpg"><h3>MUTED</h3><p class="stars">⭐⭐⭐⭐⭐ (700 sold)</p><p class="price">119k</p><button onclick="addToCart('MUTED',119)">Add to Cart</button></div>
+        <div class="card"><img src="5.jpg"><h3>NEUTRAL</h3><p class="stars">⭐⭐⭐⭐⭐ (600 sold)</p><p class="price">119k</p><button onclick="addToCart('NEUTRAL',119)">Add to Cart</button></div>
+        <div class="card"><img src="6.jpg"><h3>PASTEL</h3><p class="stars">⭐⭐⭐⭐⭐ (1.5k sold)</p><p class="price">119k</p><button onclick="addToCart('PASTEL',119)">Add to Cart</button></div>
+    </div>
 
-<div class="grid">
-
-<div class="card"><img src="1.jpg"><h3>BASIC</h3><p>⭐⭐⭐⭐⭐ (1.2k đã bán)</p><p class="price">119k</p><button onclick="addToCart('BASIC',119)">Thêm</button></div>
-
-<div class="card"><img src="2.jpg"><h3>BLACK & WHITE</h3><p>⭐⭐⭐⭐⭐ (900 đã bán)</p><p class="price">119k</p><button onclick="addToCart('B&W',119)">Thêm</button></div>
-
-<div class="card"><img src="3.jpg"><h3>MONOCHROME</h3><p>⭐⭐⭐⭐⭐ (800 đã bán)</p><p class="price">119k</p><button onclick="addToCart('MONO',119)">Thêm</button></div>
-
-<div class="card"><img src="4.jpg"><h3>MUTED</h3><p>⭐⭐⭐⭐⭐ (700 đã bán)</p><p class="price">119k</p><button onclick="addToCart('MUTED',119)">Thêm</button></div>
-
-<div class="card"><img src="5.jpg"><h3>NEUTRAL</h3><p>⭐⭐⭐⭐⭐ (600 đã bán)</p><p class="price">119k</p><button onclick="addToCart('NEUTRAL',119)">Thêm</button></div>
-
-<div class="card"><img src="6.jpg"><h3>PASTEL</h3><p>⭐⭐⭐⭐⭐ (1.5k đã bán)</p><p class="price">119k</p><button onclick="addToCart('PASTEL',119)">Thêm</button></div>
-
-</div>
-</section>
-
-<!-- COMBO -->
-<section class="products">
-<h2>🔥 COMBO TIẾT KIỆM</h2>
-
-<div class="grid">
-<div class="card"><h3>Combo 2</h3><p>229k</p><button onclick="addToCart('Combo 2',229)">Mua</button></div>
-<div class="card"><h3>Combo 3</h3><p>299k</p><button onclick="addToCart('Combo 3',299)">Mua</button></div>
-<div class="card"><h3>Combo 6</h3><p>499k</p><button onclick="addToCart('Full Set',499)">Mua</button></div>
-</div>
+    <!-- COMBO SECTION -->
+    <h2 class="section-title">🔥 BUNDLE & SAVE</h2>
+    <div class="grid">
+        <div class="card combo-card">
+            <div class="stack"><img src="1.jpg"><img src="2.jpg"></div>
+            <h3>Combo 2</h3><p class="price-old">238k</p><p class="price">229k</p>
+            <button onclick="addToCart('Combo 2',229)">Buy Bundle</button>
+        </div>
+        <div class="card combo-card">
+            <div class="stack"><img src="1.jpg"><img src="2.jpg"><img src="3.jpg"></div>
+            <h3>Combo 3</h3><p class="price-old">357k</p><p class="price">299k</p>
+            <button onclick="addToCart('Combo 3',299)">Buy Bundle</button>
+        </div>
+        <div class="card combo-card">
+            <div class="stack"><img src="1.jpg"><img src="2.jpg"><img src="4.jpg"><img src="5.jpg"><img src="6.jpg"></div>
+            <h3>Full Set (6)</h3><p class="price-old">714k</p><p class="price">499k</p>
+            <button onclick="addToCart('Full Set',499)">Buy Bundle</button>
+        </div>
+    </div>
 </section>
 
 <!-- FEEDBACK -->
 <section class="feedback">
-<h2>Khách hàng nói gì?</h2>
-<p>⭐⭐⭐⭐⭐ "Học xuyên đêm vẫn tỉnh!"</p>
-<p>⭐⭐⭐⭐⭐ "Combo quá đáng tiền"</p>
+    <h2>Viber's Stories</h2>
+    <div class="feedback-container">
+        <p>⭐⭐⭐⭐⭐ "Stayed up all night for the deadline and still felt fresh!" - <strong>An Tran</strong></p>
+        <p>⭐⭐⭐⭐⭐ "The combo is such a steal. Love the Pastel design!" - <strong>Minh Nguyen</strong></p>
+        <p>⭐⭐⭐⭐⭐ "No jitters like coffee, just pure focus. 10/10." - <strong>Huy Hoang</strong></p>
+    </div>
 </section>
 
-<!-- CART -->
+<!-- FOOTER -->
+<footer>
+    <div class="footer-content">
+        <div class="warning">
+            <p><strong>WARNING:</strong> For topical use only. Do not use on damaged, broken, or irritated skin. Please read directions carefully prior to use. In the unlikely event of side effects or adhesive allergies, please cease use and seek medical advice. Pregnant or lactating women and anyone taking medication should consult their physician before use. Keep out of reach of children.</p>
+        </div>
+        <div class="info-grid">
+            <div class="info-item">
+                <p>Product of Vietnam</p>
+                <p>Manufactured at <strong>TENNICHE CO., LTD</strong></p>
+                <p>Lot C-12, High-Tech Park, District 9, Ho Chi Minh City.</p>
+                <p>License No: 456/2024/ATTP-XNCB</p>
+            </div>
+            <div class="info-item">
+                <p>Support: +84 (28) 38XX XXXX</p>
+                <p>Email: support@vibeplus.vn</p>
+                <div class="codes">
+                    <span>[QR Code]</span> <br>
+                    <span>Barcode: 893 XXXX XXXXX X</span>
+                </div>
+            </div>
+        </div>
+        <p class="disclaimer">This product is a health supplement and not a medicine.</p>
+    </div>
+</footer>
+
+<!-- MODALS -->
 <div id="cartModal" class="modal">
-<div class="modal-content">
-
-<h2>Giỏ hàng</h2>
-<div id="cart-items"></div>
-
-<p>Tổng: <span id="total">0</span>k</p>
-<p>🚚 Freeship</p>
-
-<button onclick="checkout()">Mua ngay</button>
-<button onclick="closeCart()">Đóng</button>
-
-</div>
+    <div class="modal-content">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <hr>
+        <p>Total: <span id="total">0</span>k</p>
+        <p class="shipping">🚚 Free Shipping Worldwide</p>
+        <button class="checkout-btn" onclick="checkout()">Checkout Now</button>
+        <button class="close-btn" onclick="closeCart()">Continue Shopping</button>
+    </div>
 </div>
 
-<!-- CHECKOUT -->
 <div id="checkoutModal" class="modal">
-<div class="modal-content">
-
-<h2>Thanh toán</h2>
-
-<input placeholder="Họ tên" id="name">
-<input placeholder="SĐT" id="phone">
-<input placeholder="Địa chỉ" id="address">
-
-<select id="payment">
-<option>COD</option>
-<option>Chuyển khoản</option>
-</select>
-
-<p>Tổng tiền: <span id="final"></span>k</p>
-
-<button onclick="confirmOrder()">Xác nhận</button>
-
-</div>
+    <div class="modal-content">
+        <h2>Shipping Info</h2>
+        <input type="text" placeholder="Full Name" id="name">
+        <input type="text" placeholder="Phone Number" id="phone">
+        <textarea placeholder="Full Address" id="address"></textarea>
+        <select id="payment">
+            <option>Cash on Delivery (COD)</option>
+            <option>Bank Transfer</option>
+        </select>
+        <p>Final Total: <span id="final"></span>k</p>
+        <button class="confirm-btn" onclick="confirmOrder()">Confirm Order</button>
+    </div>
 </div>
 
-<!-- TOAST -->
 <div id="toast"></div>
 
 <script src="script.js"></script>
