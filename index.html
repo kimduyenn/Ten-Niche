@@ -51,38 +51,37 @@
 </section>
 
 <!-- PRODUCTS GRID -->
-<section class="products" id="shop">
-    <h2 class="section-title">SELECT YOUR STYLE</h2>
+<!-- PRODUCTS GRID -->
+<section class="products" id="products-grid">
+    <h2 class="section-title">CHOOSE YOUR STYLE</h2>
     <div class="grid">
-        <div class="card"><img src="Basic.jpg"><h3>BASIC</h3><p class="stars">⭐⭐⭐⭐⭐ (1.2k sold)</p><p class="price">119k</p><button onclick="addToCart('BASIC',119)">Add to Cart</button></div>
-        <div class="card"><img src="Black_White.jpg"><h3>BLACK & WHITE</h3><p class="stars">⭐⭐⭐⭐⭐ (900 sold)</p><p class="price">119k</p><button onclick="addToCart('B&W',119)">Add to Cart</button></div>
-        <div class="card"><img src="Monochrome.jpg"><h3>MONOCHROME</h3><p class="stars">⭐⭐⭐⭐⭐ (800 sold)</p><p class="price">119k</p><button onclick="addToCart('MONO',119)">Add to Cart</button></div>
-        <div class="card"><img src="Muted.jpg"><h3>MUTED</h3><p class="stars">⭐⭐⭐⭐⭐ (700 sold)</p><p class="price">119k</p><button onclick="addToCart('MUTED',119)">Add to Cart</button></div>
-        <div class="card"><img src="Neutral.jpg"><h3>NEUTRAL</h3><p class="stars">⭐⭐⭐⭐⭐ (600 sold)</p><p class="price">119k</p><button onclick="addToCart('NEUTRAL',119)">Add to Cart</button></div>
-        <div class="card"><img src="Pastel.jpg"><h3>PASTEL</h3><p class="stars">⭐⭐⭐⭐⭐ (1.5k sold)</p><p class="price">119k</p><button onclick="addToCart('PASTEL',119)">Add to Cart</button></div>
+        <div class="card"><img src="1.jpg"><h3>BASIC</h3><p class="stars">⭐⭐⭐⭐⭐ (1.2k sold)</p><p class="price">119k</p><button onclick="addToCart('BASIC',119)">Add to Cart</button></div>
+        <div class="card"><img src="2.jpg"><h3>BLACK & WHITE</h3><p class="stars">⭐⭐⭐⭐⭐ (900 sold)</p><p class="price">119k</p><button onclick="addToCart('B&W',119)">Add to Cart</button></div>
+        <div class="card"><img src="3.jpg"><h3>MONOCHROME</h3><p class="stars">⭐⭐⭐⭐⭐ (800 sold)</p><p class="price">119k</p><button onclick="addToCart('MONO',119)">Add to Cart</button></div>
+        <div class="card"><img src="4.jpg"><h3>MUTED</h3><p class="stars">⭐⭐⭐⭐⭐ (700 sold)</p><p class="price">119k</p><button onclick="addToCart('MUTED',119)">Add to Cart</button></div>
+        <div class="card"><img src="5.jpg"><h3>NEUTRAL</h3><p class="stars">⭐⭐⭐⭐⭐ (600 sold)</p><p class="price">119k</p><button onclick="addToCart('NEUTRAL',119)">Add to Cart</button></div>
+        <div class="card"><img src="6.jpg"><h3>PASTEL</h3><p class="stars">⭐⭐⭐⭐⭐ (1.5k sold)</p><p class="price">119k</p><button onclick="addToCart('PASTEL',119)">Add to Cart</button></div>
     </div>
 
-    <!-- COMBO SECTION -->
-    <h2 class="section-title">🔥 BUNDLE & SAVE</h2>
-    <div class="grid">
-        <div class="card combo-card">
-            <div class="stack"><img src="Basic.jpg"><img src="Black_White.jpg"></div>
-            <h3>Combo 2</h3><p class="price-old">238k</p><p class="price">229k</p>
-            <button onclick="addToCart('Combo 2',229)">Buy Bundle</button>
-        </div>
-        <div class="card combo-card">
-            <div class="stack"><img src="Basic.jpg"><img src="Black_White.jpg"><img src="Monochrome.jpg"></div>
-            <h3>Combo 3</h3><p class="price-old">357k</p><p class="price">299k</p>
-            <button onclick="addToCart('Combo 3',299)">Buy Bundle</button>
-        </div>
-        <div class="card combo-card">
-            <div class="stack"><img src="Muted.jpg"><img src="Neutral.jpg"><img src="Pastel.jpg"></div>
-            <h3>Full Set (6)</h3><p class="price-old">714k</p><p class="price">499k</p>
-            <button onclick="addToCart('Full Set',499)">Buy Bundle</button>
-        </div>
+   <!-- Ví dụ cho Combo 2 -->
+<div class="card combo-card">
+    <div class="stack">
+        <!-- Thêm onclick để mở hình đó lên -->
+        <img src="Basic.jpg" onclick="openLightbox(this.src)">
+        <img src="Black_White.jpg" onclick="openLightbox(this.src)">
     </div>
-</section>
+    <h3>Combo 2</h3>
+    <p class="price-old">238k</p>
+    <p class="price">229k</p>
+    <button onclick="addToCart('Combo 2',229)">Buy Bundle</button>
+</div>
 
+<!-- Thêm khung Lightbox này vào cuối file HTML (trước thẻ đóng </body>) -->
+<div id="lightbox" class="lightbox" onclick="this.style.display='none'">
+    <span class="close-lightbox">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+</div> 
+    
 <!-- FEEDBACK -->
 <section class="feedback">
     <h2>What Our Viber's Say</h2>
