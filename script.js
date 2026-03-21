@@ -81,3 +81,4 @@ setTimeout(()=>t.style.display="none",2000);
 setInterval(()=>{
 showToast("🔥 Có người vừa mua hàng!");
 },8000);
+   
