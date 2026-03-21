@@ -76,6 +76,9 @@ nav a { color: white; text-decoration: none; }
 .stack img { position: absolute; width: 60%; left: 20%; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
 .stack img:nth-child(2) { transform: rotate(10deg) translate(20px, 10px); }
 .stack img:nth-child(3) { transform: rotate(-10deg) translate(-20px, 20px); }
+.stack img:nth-child(4) { z-index: 2; transform: rotate(15deg) translate(25px, 15px); }
+.stack img:nth-child(5) { z-index: 1; transform: rotate(-15deg) translate(-25px, 20px); }
+.stack img:nth-child(6) { z-index: 0; transform: scale(0.9) translate(0, 25px); }
 /* Hiệu ứng Lightbox */
 .lightbox {
     display: none; 
