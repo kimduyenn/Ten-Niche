@@ -1,51 +1,61 @@
 let cart = 0;
 
-function addToCart(){
-    cart++;
-    document.getElementById("cart-count").innerText = cart;
-}
-
 /* COUNTDOWN */
-let time = 7200;
+let t = 7200;
 setInterval(()=>{
-    let h = Math.floor(time/3600);
-    let m = Math.floor((time%3600)/60);
-    let s = time%60;
+let h=Math.floor(t/3600);
+let m=Math.floor((t%3600)/60);
+let s=t%60;
 
-    document.getElementById("countdown").innerText =
-        `${h.toString().padStart(2,'0')}:`+
-        `${m.toString().padStart(2,'0')}:`+
-        `${s.toString().padStart(2,'0')}`;
+document.getElementById("countdown").innerText =
+`${h}:${m}:${s}`;
 
-    if(time>0) time--;
+if(t>0) t--;
 },1000);
 
-/* MODAL */
-function openCheckout(name, price){
-    document.getElementById("modal").style.display="block";
-    document.getElementById("product-name").innerText=name;
-    document.getElementById("product-price").innerText=price;
-    addToCart();
+/* DETAIL */
+function openDetail(name){
+document.getElementById("modal").style.display="block";
+document.getElementById("name").innerText=name;
 }
 
-function closeModal(){
-    document.getElementById("modal").style.display="none";
+function closeDetail(){
+document.getElementById("modal").style.display="none";
 }
 
-function confirmOrder(){
-    showToast("Đặt hàng thành công!");
-    closeModal();
+/* BUY */
+function buyNow(){
+cart++;
+document.getElementById("cart-count").innerText=cart;
+showToast("🛒 Đã thêm vào giỏ");
+
+/* upsell */
+setTimeout(()=>{
+showToast("🔥 Mua combo tiết kiệm hơn!");
+},2000);
+}
+
+/* COMBO */
+function buyCombo(name,price){
+cart++;
+document.getElementById("cart-count").innerText=cart;
+showToast("🔥 Đã chọn " + name);
 }
 
 /* TOAST */
 function showToast(msg){
-    let t = document.getElementById("toast");
-    t.innerText = msg;
-    t.style.display="block";
-    setTimeout(()=>t.style.display="none",2000);
+let t=document.getElementById("toast");
+t.innerText=msg;
+t.style.display="block";
+setTimeout(()=>t.style.display="none",2000);
 }
 
-/* LIKE */
-function toggleLike(el){
-    el.style.color = el.style.color==="red"?"black":"red";
-}
+/* FAKE BUY */
+setInterval(()=>{
+showToast("🔥 Có người vừa mua sản phẩm!");
+},8000);
+
+/* LANGUAGE */
+function setLang(lang){
+alert("Demo thôi 😆");
+}   
