@@ -71,14 +71,41 @@ nav a { color: white; text-decoration: none; }
     border: none; border-radius: 8px; cursor: pointer;
 }
 
-/* Combo Stack Effect */
-.stack { position: relative; height: 200px; margin-bottom: 15px; }
-.stack img { position: absolute; width: 60%; left: 20%; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
-.stack img:nth-child(2) { transform: rotate(10deg) translate(20px, 10px); }
-.stack img:nth-child(3) { transform: rotate(-10deg) translate(-20px, 20px); }
-.stack img:nth-child(4) { z-index: 2; transform: rotate(15deg) translate(25px, 15px); }
-.stack img:nth-child(5) { z-index: 1; transform: rotate(-15deg) translate(-25px, 20px); }
-.stack img:nth-child(6) { z-index: 0; transform: scale(0.9) translate(0, 25px); }
+/* TỔNG HỢP COMBO STACK CHUẨN - XÓA CODE CŨ DÁN ĐOẠN NÀY */
+.stack {
+    position: relative;
+    height: 220px; /* Tăng nhẹ chiều cao để không bị cấn chữ bên dưới */
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stack img {
+    position: absolute;
+    width: 70%; /* Độ rộng vừa phải để lộ các lớp ảnh bên dưới */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    border: 2px solid white; /* Thêm viền trắng để tách biệt các lớp ảnh */
+    transition: all 0.3s ease;
+    cursor: zoom-in;
+}
+
+/* Cấu hình vị trí từng tấm để lộ rõ 6 lớp */
+.stack img:nth-child(1) { z-index: 6; transform: rotate(0deg); }
+.stack img:nth-child(2) { z-index: 5; transform: rotate(7deg) translate(20px, 8px); }
+.stack img:nth-child(3) { z-index: 4; transform: rotate(-9deg) translate(-25px, 12px); }
+.stack img:nth-child(4) { z-index: 3; transform: rotate(14deg) translate(45px, 18px); }
+.stack img:nth-child(5) { z-index: 2; transform: rotate(-15deg) translate(-50px, 25px); }
+.stack img:nth-child(6) { z-index: 1; transform: rotate(0deg) translate(0, 35px); opacity: 0.9; }
+
+/* Hiệu ứng Hover: Tấm hình đang chỉ vào sẽ nổi lên trên cùng */
+.stack img:hover {
+    z-index: 100 !important;
+    transform: scale(1.15) rotate(0deg) !important; /* Phóng to và xoay thẳng lại */
+    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.5); /* Thêm bóng vàng cho sang */
+}
+
 /* Hiệu ứng Lightbox */
 .lightbox {
     display: none; 
