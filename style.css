@@ -54,5 +54,4 @@ h1 span { color: var(--gold); }
 .social-btn { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 20px; }
 .fb { background: #1877F2; } .email { background: #ee4d2d; } .phone { background: #25D366; }
 
-@keyframes slideIn { from { transform: translateX(-100%); } to { transform: translateX(0); } }
-    
+@keyframes slideIn { from { transform: translateX(-100%); } to { transform: translateX(0); } } 
