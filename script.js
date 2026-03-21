@@ -104,4 +104,4 @@ window.onload = () => { startCountdown(7200); };
 window.onclick = (e) => { 
     if (e.target.className === 'modal') { closeModal(); closeCheckout(); }
 };
-   
+    
