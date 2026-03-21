@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VIBE+ Shop</title>
+<title>VIBE+ | Tech-Niche</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -16,53 +16,59 @@
 <div class="logo">VIBE+</div>
 
 <ul>
-<li onclick="openCart()">🛒 <span id="cart-count">0</span></li>
+<li onclick="openCart()">🛒 (<span id="cart-count">0</span>)</li>
 <li><a href="https://www.facebook.com/profile.php?id=61578541236556Ten-Niche" target="_blank">FB</a></li>
+<li><a href="mailto:support@vibeplus.vn">Email</a></li>
 </ul>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
 <h1>ENERGY PATCH</h1>
-<p>Boost Focus - No Crash</p>
+<p>Boost Your Style, Unbox Your Mind</p>
+
+<div class="countdown">
+⚡ Flash Sale kết thúc sau: <span id="countdown">02:00:00</span>
+</div>
 </section>
 
-<!-- SWIPE PRODUCTS -->
+<!-- PRODUCTS -->
 <section class="products">
 <h2>SẢN PHẨM</h2>
 
-<div class="scroll">
+<div class="grid">
 
-<div class="card" onclick="openDetail('BASIC',119)">
-<img src="Basic.jpg">
-<h3>BASIC</h3>
-<p class="price">119k</p>
-</div>
+<div class="card"><img src="1.jpg"><h3>BASIC</h3><p>⭐⭐⭐⭐⭐ (1.2k đã bán)</p><p class="price">119k</p><button onclick="addToCart('BASIC',119)">Thêm</button></div>
 
-<div class="card" onclick="openDetail('BLACK',119)">
-<img src="Black_White.jpg">
-<h3>BLACK</h3>
-<p class="price">119k</p>
-</div>
+<div class="card"><img src="2.jpg"><h3>BLACK & WHITE</h3><p>⭐⭐⭐⭐⭐ (900 đã bán)</p><p class="price">119k</p><button onclick="addToCart('B&W',119)">Thêm</button></div>
 
-<div class="card" onclick="openDetail('PASTEL',119)">
-<img src="Pastel.jpg">
-<h3>PASTEL</h3>
-<p class="price">119k</p>
-</div>
+<div class="card"><img src="3.jpg"><h3>MONOCHROME</h3><p>⭐⭐⭐⭐⭐ (800 đã bán)</p><p class="price">119k</p><button onclick="addToCart('MONO',119)">Thêm</button></div>
+
+<div class="card"><img src="4.jpg"><h3>MUTED</h3><p>⭐⭐⭐⭐⭐ (700 đã bán)</p><p class="price">119k</p><button onclick="addToCart('MUTED',119)">Thêm</button></div>
+
+<div class="card"><img src="5.jpg"><h3>NEUTRAL</h3><p>⭐⭐⭐⭐⭐ (600 đã bán)</p><p class="price">119k</p><button onclick="addToCart('NEUTRAL',119)">Thêm</button></div>
+
+<div class="card"><img src="6.jpg"><h3>PASTEL</h3><p>⭐⭐⭐⭐⭐ (1.5k đã bán)</p><p class="price">119k</p><button onclick="addToCart('PASTEL',119)">Thêm</button></div>
 
 </div>
 </section>
 
 <!-- COMBO -->
 <section class="products">
-<h2>COMBO</h2>
+<h2>🔥 COMBO TIẾT KIỆM</h2>
 
-<div class="card" onclick="addToCart('Full Set',499)">
-<h3>FULL SET</h3>
-<p class="price">499k</p>
+<div class="grid">
+<div class="card"><h3>Combo 2</h3><p>229k</p><button onclick="addToCart('Combo 2',229)">Mua</button></div>
+<div class="card"><h3>Combo 3</h3><p>299k</p><button onclick="addToCart('Combo 3',299)">Mua</button></div>
+<div class="card"><h3>Combo 6</h3><p>499k</p><button onclick="addToCart('Full Set',499)">Mua</button></div>
 </div>
+</section>
 
+<!-- FEEDBACK -->
+<section class="feedback">
+<h2>Khách hàng nói gì?</h2>
+<p>⭐⭐⭐⭐⭐ "Học xuyên đêm vẫn tỉnh!"</p>
+<p>⭐⭐⭐⭐⭐ "Combo quá đáng tiền"</p>
 </section>
 
 <!-- CART -->
@@ -73,7 +79,7 @@
 <div id="cart-items"></div>
 
 <p>Tổng: <span id="total">0</span>k</p>
-<p>🚚 Free ship</p>
+<p>🚚 Freeship</p>
 
 <button onclick="checkout()">Mua ngay</button>
 <button onclick="closeCart()">Đóng</button>
@@ -91,6 +97,11 @@
 <input placeholder="SĐT" id="phone">
 <input placeholder="Địa chỉ" id="address">
 
+<select id="payment">
+<option>COD</option>
+<option>Chuyển khoản</option>
+</select>
+
 <p>Tổng tiền: <span id="final"></span>k</p>
 
 <button onclick="confirmOrder()">Xác nhận</button>
@@ -98,8 +109,10 @@
 </div>
 </div>
 
-<script src="script.js"></script>
+<!-- TOAST -->
+<div id="toast"></div>
 
+<script src="script.js"></script>
 </body>
 </html>
-    
+   
