@@ -60,4 +60,3 @@ function openTab(evt, tabName) {
 
 window.onload = function() { startCountdown(7200); };
 window.onclick = function(e) { if (e.target == document.getElementById("productModal")) closeModal(); }
-   
