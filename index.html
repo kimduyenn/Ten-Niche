@@ -3,13 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>VIBE+ Energy Patch</title>
+<title>VIBE+ Shop</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-
 </head>
+
 <body>
 
 <!-- NAV -->
@@ -17,9 +16,8 @@
 <div class="logo">VIBE+</div>
 
 <ul>
-<li onclick="setLang('vi')">🇻🇳</li>
-<li onclick="setLang('en')">🇺🇸</li>
-<li>🛒 <span id="cart-count">0</span></li>
+<li onclick="openCart()">🛒 <span id="cart-count">0</span></li>
+<li><a href="https://www.facebook.com/profile.php?id=61578541236556Ten-Niche" target="_blank">FB</a></li>
 </ul>
 </nav>
 
@@ -27,61 +25,29 @@
 <section class="hero">
 <h1>ENERGY PATCH</h1>
 <p>Boost Focus - No Crash</p>
-<div class="flash">⚡ <span id="countdown">02:00:00</span></div>
 </section>
 
-<!-- PRODUCTS -->
+<!-- SWIPE PRODUCTS -->
 <section class="products">
 <h2>SẢN PHẨM</h2>
 
-<div class="grid">
+<div class="scroll">
 
-<!-- 6 sản phẩm -->
-<div class="card" onclick="openDetail('BASIC')">
+<div class="card" onclick="openDetail('BASIC',119)">
 <img src="Basic.jpg">
 <h3>BASIC</h3>
-<div class="rating">★★★★★ (1.2k)</div>
-<p class="old">150k</p>
 <p class="price">119k</p>
 </div>
 
-<div class="card" onclick="openDetail('BLACK & WHITE')">
+<div class="card" onclick="openDetail('BLACK',119)">
 <img src="Black_White.jpg">
-<h3>BLACK & WHITE</h3>
-<div class="rating">★★★★★ (980)</div>
-<p class="old">150k</p>
+<h3>BLACK</h3>
 <p class="price">119k</p>
 </div>
 
-<div class="card" onclick="openDetail('MONOCHROME')">
-<img src="Monochrome.jpg">
-<h3>MONOCHROME</h3>
-<div class="rating">★★★★★ (760)</div>
-<p class="old">150k</p>
-<p class="price">119k</p>
-</div>
-
-<div class="card" onclick="openDetail('MUTED')">
-<img src="Muted.jpg">
-<h3>MUTED</h3>
-<div class="rating">★★★★★ (540)</div>
-<p class="old">150k</p>
-<p class="price">119k</p>
-</div>
-
-<div class="card" onclick="openDetail('NEUTRAL')">
-<img src="Neutral.jpg">
-<h3>NEUTRAL</h3>
-<div class="rating">★★★★★ (600)</div>
-<p class="old">150k</p>
-<p class="price">119k</p>
-</div>
-
-<div class="card" onclick="openDetail('PASTEL')">
+<div class="card" onclick="openDetail('PASTEL',119)">
 <img src="Pastel.jpg">
 <h3>PASTEL</h3>
-<div class="rating">★★★★★ (1.5k)</div>
-<p class="old">150k</p>
 <p class="price">119k</p>
 </div>
 
@@ -90,74 +56,49 @@
 
 <!-- COMBO -->
 <section class="products">
-<h2>🔥 COMBO TIẾT KIỆM</h2>
+<h2>COMBO</h2>
 
-<div class="grid">
-
-<div class="card combo" onclick="buyCombo('Combo 2','229k')">
-<span class="badge">-25%</span>
-<img src="1.jpg">
-<h3>Combo 2 sản phẩm</h3>
-<div class="rating">★★★★★ (2k)</div>
-<p class="old">300k</p>
-<p class="price">229k</p>
-</div>
-
-<div class="card combo" onclick="buyCombo('Combo 3','299k')">
-<span class="badge">Best Seller</span>
-<img src="2.jpg">
-<h3>Combo 3 sản phẩm</h3>
-<div class="rating">★★★★★ (3.2k)</div>
-<p class="old">450k</p>
-<p class="price">299k</p>
-</div>
-
-<div class="card combo" onclick="buyCombo('Full Set','499k')">
-<span class="badge gold">VIP</span>
-<img src="3.jpg">
-<h3>Full Set 6 loại</h3>
-<div class="rating">★★★★★ (5k)</div>
-<p class="old">900k</p>
+<div class="card" onclick="addToCart('Full Set',499)">
+<h3>FULL SET</h3>
 <p class="price">499k</p>
 </div>
 
-</div>
 </section>
 
-<!-- VIDEO -->
-<section class="video">
-<h2>🎥 TikTok Review</h2>
-
-<div class="fake-video">
-▶
-<p>Review thực tế</p>
-</div>
-</section>
-
-<!-- MODAL -->
-<div id="modal" class="modal">
+<!-- CART -->
+<div id="cartModal" class="modal">
 <div class="modal-content">
 
-<span onclick="closeDetail()">✖</span>
+<h2>Giỏ hàng</h2>
+<div id="cart-items"></div>
 
-<h2 id="name"></h2>
+<p>Tổng: <span id="total">0</span>k</p>
+<p>🚚 Free ship</p>
 
-<p><b>Công dụng:</b></p>
-<p>Tăng tập trung, giảm stress, học 8h</p>
-
-<p><b>Cách dùng:</b></p>
-<p>Bóc → dán → dùng 8h</p>
-
-<button onclick="buyNow()">Mua ngay</button>
+<button onclick="checkout()">Mua ngay</button>
+<button onclick="closeCart()">Đóng</button>
 
 </div>
 </div>
 
-<!-- TOAST -->
-<div id="toast"></div>
+<!-- CHECKOUT -->
+<div id="checkoutModal" class="modal">
+<div class="modal-content">
+
+<h2>Thanh toán</h2>
+
+<input placeholder="Họ tên" id="name">
+<input placeholder="SĐT" id="phone">
+<input placeholder="Địa chỉ" id="address">
+
+<p>Tổng tiền: <span id="final"></span>k</p>
+
+<button onclick="confirmOrder()">Xác nhận</button>
+
+</div>
+</div>
 
 <script src="script.js"></script>
 
 </body>
 </html>
-    
