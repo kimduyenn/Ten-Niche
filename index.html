@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VIBE+ | Energy Patch - Stay in the Zone</title>
+    <title>VIBE+ | Energy Patch - Boost Your Style</title>
     <link href="https://googleapis.com" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -14,8 +14,8 @@
     <div class="logo">VIBE+</div>
     <ul>
         <li onclick="openCart()" class="cart-btn">🛒 (<span id="cart-count">0</span>)</li>
-        <li><a href="https://facebook.com" target="_blank">FB</a></li>
-        <li><a href="mailto:support@vibeplus.vn">Email</a></li>
+        <li><a href="https://facebook.com" target="_blank">FACEBOOK</a></li>
+        <li><a href="mailto:support@vibeplus.vn">EMAIL</a></li>
     </ul>
 </nav>
 
@@ -27,11 +27,11 @@
         <div class="countdown-box">
             ⚡ Flash Sale ends in: <span id="countdown">02:00:00</span>
         </div>
-        <button class="cta-main" onclick="document.getElementById('products-grid').scrollIntoView({behavior: 'smooth'})">SHOP NOW</button>
+        <button class="cta-main" onclick="document.getElementById('shop').scrollIntoView({behavior: 'smooth'})">SHOP NOW</button>
     </div>
 </header>
 
-<!-- WHY VIBE+ & HOW IT WORKS -->
+<!-- WHY VIBE+ -->
 <section class="info-section">
     <div class="container">
         <h2>Why VIBE+?</h2>
@@ -43,49 +43,40 @@
         </div>
         
         <div class="steps">
-            <div class="step">
-                <div class="circle">1</div>
-                <p>Peel the patch from the backing sheet</p>
-            </div>
-            <div class="step">
-                <div class="circle">2</div>
-                <p>Place on a hairless area of skin</p>
-            </div>
-            <div class="step">
-                <div class="circle">3</div>
-                <p>Enjoy up to 8 hours of focus</p>
-            </div>
+            <div class="step"><div class="circle">1</div><p>Peel the patch</p></div>
+            <div class="step"><div class="circle">2</div><p>Place on skin</p></div>
+            <div class="step"><div class="circle">3</div><p>Enjoy 8h focus</p></div>
         </div>
     </div>
 </section>
 
 <!-- PRODUCTS GRID -->
-<section class="products" id="products-grid">
-    <h2 class="section-title">CHOOSE YOUR STYLE</h2>
+<section class="products" id="shop">
+    <h2 class="section-title">SELECT YOUR STYLE</h2>
     <div class="grid">
-        <div class="card"><img src="1.jpg"><h3>BASIC</h3><p class="stars">⭐⭐⭐⭐⭐ (1.2k sold)</p><p class="price">119k</p><button onclick="addToCart('BASIC',119)">Add to Cart</button></div>
-        <div class="card"><img src="2.jpg"><h3>BLACK & WHITE</h3><p class="stars">⭐⭐⭐⭐⭐ (900 sold)</p><p class="price">119k</p><button onclick="addToCart('B&W',119)">Add to Cart</button></div>
-        <div class="card"><img src="3.jpg"><h3>MONOCHROME</h3><p class="stars">⭐⭐⭐⭐⭐ (800 sold)</p><p class="price">119k</p><button onclick="addToCart('MONO',119)">Add to Cart</button></div>
-        <div class="card"><img src="4.jpg"><h3>MUTED</h3><p class="stars">⭐⭐⭐⭐⭐ (700 sold)</p><p class="price">119k</p><button onclick="addToCart('MUTED',119)">Add to Cart</button></div>
-        <div class="card"><img src="5.jpg"><h3>NEUTRAL</h3><p class="stars">⭐⭐⭐⭐⭐ (600 sold)</p><p class="price">119k</p><button onclick="addToCart('NEUTRAL',119)">Add to Cart</button></div>
-        <div class="card"><img src="6.jpg"><h3>PASTEL</h3><p class="stars">⭐⭐⭐⭐⭐ (1.5k sold)</p><p class="price">119k</p><button onclick="addToCart('PASTEL',119)">Add to Cart</button></div>
+        <div class="card"><img src="Basic.jpg"><h3>BASIC</h3><p class="stars">⭐⭐⭐⭐⭐ (1.2k sold)</p><p class="price">119k</p><button onclick="addToCart('BASIC',119)">Add to Cart</button></div>
+        <div class="card"><img src="Black_White.jpg"><h3>BLACK & WHITE</h3><p class="stars">⭐⭐⭐⭐⭐ (900 sold)</p><p class="price">119k</p><button onclick="addToCart('B&W',119)">Add to Cart</button></div>
+        <div class="card"><img src="Monochrome.jpg"><h3>MONOCHROME</h3><p class="stars">⭐⭐⭐⭐⭐ (800 sold)</p><p class="price">119k</p><button onclick="addToCart('MONO',119)">Add to Cart</button></div>
+        <div class="card"><img src="Muted.jpg"><h3>MUTED</h3><p class="stars">⭐⭐⭐⭐⭐ (700 sold)</p><p class="price">119k</p><button onclick="addToCart('MUTED',119)">Add to Cart</button></div>
+        <div class="card"><img src="Neutral.jpg"><h3>NEUTRAL</h3><p class="stars">⭐⭐⭐⭐⭐ (600 sold)</p><p class="price">119k</p><button onclick="addToCart('NEUTRAL',119)">Add to Cart</button></div>
+        <div class="card"><img src="Pastel.jpg"><h3>PASTEL</h3><p class="stars">⭐⭐⭐⭐⭐ (1.5k sold)</p><p class="price">119k</p><button onclick="addToCart('PASTEL',119)">Add to Cart</button></div>
     </div>
 
     <!-- COMBO SECTION -->
     <h2 class="section-title">🔥 BUNDLE & SAVE</h2>
     <div class="grid">
         <div class="card combo-card">
-            <div class="stack"><img src="1.jpg"><img src="2.jpg"></div>
+            <div class="stack"><img src="Basic.jpg"><img src="Black_White.jpg"></div>
             <h3>Combo 2</h3><p class="price-old">238k</p><p class="price">229k</p>
             <button onclick="addToCart('Combo 2',229)">Buy Bundle</button>
         </div>
         <div class="card combo-card">
-            <div class="stack"><img src="1.jpg"><img src="2.jpg"><img src="3.jpg"></div>
+            <div class="stack"><img src="Basic.jpg"><img src="Black_White.jpg"><img src="Monochrome.jpg"></div>
             <h3>Combo 3</h3><p class="price-old">357k</p><p class="price">299k</p>
             <button onclick="addToCart('Combo 3',299)">Buy Bundle</button>
         </div>
         <div class="card combo-card">
-            <div class="stack"><img src="1.jpg"><img src="2.jpg"><img src="4.jpg"><img src="5.jpg"><img src="6.jpg"></div>
+            <div class="stack"><img src="Muted.jpg"><img src="Neutral.jpg"><img src="Pastel.jpg"></div>
             <h3>Full Set (6)</h3><p class="price-old">714k</p><p class="price">499k</p>
             <button onclick="addToCart('Full Set',499)">Buy Bundle</button>
         </div>
@@ -94,7 +85,7 @@
 
 <!-- FEEDBACK -->
 <section class="feedback">
-    <h2>Viber's Stories</h2>
+    <h2>What Our Viber's Say</h2>
     <div class="feedback-container">
         <p>⭐⭐⭐⭐⭐ "Stayed up all night for the deadline and still felt fresh!" - <strong>An Tran</strong></p>
         <p>⭐⭐⭐⭐⭐ "The combo is such a steal. Love the Pastel design!" - <strong>Minh Nguyen</strong></p>
@@ -110,18 +101,15 @@
         </div>
         <div class="info-grid">
             <div class="info-item">
-                <p>Product of Vietnam</p>
-                <p>Manufactured at <strong>TENNICHE CO., LTD</strong></p>
+                <p>Product of Vietnam | Manufactured at <strong>TENNICHE CO., LTD</strong></p>
                 <p>Lot C-12, High-Tech Park, District 9, Ho Chi Minh City.</p>
                 <p>License No: 456/2024/ATTP-XNCB</p>
             </div>
             <div class="info-item">
-                <p>Support: +84 (28) 38XX XXXX</p>
-                <p>Email: support@vibeplus.vn</p>
-                <div class="codes">
-                    <span>[QR Code]</span> <br>
-                    <span>Barcode: 893 XXXX XXXXX X</span>
-                </div>
+                <p>📞 <a href="tel:+842838000000" style="color:white;text-decoration:none;">+84 (28) 38XX XXXX</a></p>
+                <p>📧 <a href="mailto:support@vibeplus.vn" style="color:white;text-decoration:none;">support@vibeplus.vn</a></p>
+                <p>🌐 <a href="https://facebook.com" target="_blank" style="color:white;text-decoration:none;">Follow us on Facebook</a></p>
+                <div class="codes">Barcode: 893 XXXX XXXXX X</div>
             </div>
         </div>
         <p class="disclaimer">This product is a health supplement and not a medicine.</p>
@@ -135,23 +123,19 @@
         <div id="cart-items"></div>
         <hr>
         <p>Total: <span id="total">0</span>k</p>
-        <p class="shipping">🚚 Free Shipping Worldwide</p>
-        <button class="checkout-btn" onclick="checkout()">Checkout Now</button>
-        <button class="close-btn" onclick="closeCart()">Continue Shopping</button>
+        <button class="checkout-btn" onclick="checkout()">Checkout</button>
+        <button class="close-btn" onclick="closeCart()">Close</button>
     </div>
 </div>
 
 <div id="checkoutModal" class="modal">
     <div class="modal-content">
-        <h2>Shipping Info</h2>
+        <h2>Shipping Details</h2>
         <input type="text" placeholder="Full Name" id="name">
-        <input type="text" placeholder="Phone Number" id="phone">
-        <textarea placeholder="Full Address" id="address"></textarea>
-        <select id="payment">
-            <option>Cash on Delivery (COD)</option>
-            <option>Bank Transfer</option>
-        </select>
-        <p>Final Total: <span id="final"></span>k</p>
+        <input type="text" placeholder="Phone" id="phone">
+        <textarea placeholder="Address" id="address"></textarea>
+        <select id="payment"><option>COD</option><option>Bank Transfer</option></select>
+        <p>Total: <span id="final"></span>k</p>
         <button class="confirm-btn" onclick="confirmOrder()">Confirm Order</button>
     </div>
 </div>
@@ -161,4 +145,4 @@
 <script src="script.js"></script>
 </body>
 </html>
-   
+    
