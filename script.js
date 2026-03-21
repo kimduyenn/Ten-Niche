@@ -86,3 +86,4 @@ window.onclick = (e) => {
     if (e.target.className == 'modal') { closeModal(); closeCheckout(); }
 }   
   
+   
