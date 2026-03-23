@@ -8,7 +8,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<div id="cart-modal" class="cart-overlay" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.9); justify-content:center; align-items:center;">
+    <div class="cart-container" style="background:#0b1d3a; padding:30px; border-radius:20px; border:2px solid #ffd700; width:90%; max-width:400px; color:white;">
+        <span onclick="closeCart()" style="float:right; cursor:pointer; font-size:24px; color:#ffd700;">&times;</span>
+        <h2 style="color:#ffd700;">GIỎ HÀNG 🛒</h2>
+        <div id="cart-items-list" style="margin:20px 0; border-bottom:1px solid #333; padding-bottom:10px;"></div>
+        <p style="text-align:right; font-weight:bold;">Tổng cộng: <span id="cart-total-price">0</span>k</p>
+        
+        <form id="checkout-form">
+            <input type="text" id="cus-name" placeholder="Họ và Tên" required style="width:100%; margin:5px 0; padding:10px; border-radius:5px; border:1px solid #333; background:#050c1a; color:white;">
+            <input type="text" id="cus-address" placeholder="Địa chỉ giao hàng" required style="width:100%; margin:5px 0; padding:10px; border-radius:5px; border:1px solid #333; background:#050c1a; color:white;">
+            <input type="tel" id="cus-phone" placeholder="Số điện thoại" required style="width:100%; margin:5px 0; padding:10px; border-radius:5px; border:1px solid #333; background:#050c1a; color:white;">
+            <div style="margin:10px 0; font-size:14px;">
+                <label><input type="radio" name="payment" value="Tiền mặt" checked> Tiền mặt</label>
+                <label style="margin-left:15px"><input type="radio" name="payment" value="Thẻ/CK"> Thẻ/Chuyển khoản</label>
+            </div>
+            <button type="submit" style="width:100%; padding:15px; background:#ffd700; border:none; border-radius:30px; font-weight:bold; cursor:pointer; margin-top:10px;">XÁC NHẬN MUA HÀNG</button>
+        </form>
+    </div>
+</div>
 <!-- NAVIGATION -->
 <nav>
     <div class="logo">VIBE+</div>
