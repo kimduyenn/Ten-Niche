@@ -54,18 +54,18 @@
     <div class="popup-modal popup-wide" onclick="event.stopPropagation()">
         <button class="popup-close" onclick="closeLucky()">✕</button>
         <div class="popup-eyebrow">EXCLUSIVE REWARD</div>
-        <h3 class="popup-heading">🎰 MUA LÀ TRÚNG!</h3>
-        <p class="popup-sub">Nhập mã bí mật trong bao bì để nhận lượt quay thưởng</p>
+        <h3 class="popup-heading">🎰 BUY AND WIN!</h3>
+        <p class="popup-sub">Enter the secret code inside the packaging to receive a prize spin.</p>
         <div class="lucky-input-row">
-            <input type="text" id="luckyCodeInput" placeholder="NHẬP MÃ BÍ MẬT..." class="lucky-input">
-            <button onclick="validateLuckyCode()" class="btn-validate">XÁC NHẬN</button>
+            <input type="text" id="luckyCodeInput" placeholder="Enter The Secret Code..." class="lucky-input">
+            <button onclick="validateLuckyCode()" class="btn-validate">CONFIRM</button>
         </div>
         <div id="lucky-spin-area" style="display:none">
             <div class="wheel-wrap">
                 <div class="wheel-pointer">▼</div>
                 <canvas id="luckyWheel" width="300" height="300"></canvas>
             </div>
-            <button id="spinBtn" class="btn-spin" onclick="spinWheel()">QUAY NGAY ⚡</button>
+            <button id="spinBtn" class="btn-spin" onclick="spinWheel()">SPIN NOW ⚡</button>
         </div>
         <div id="lucky-result" class="lucky-result"></div>
         <div class="prize-preview">
@@ -100,7 +100,7 @@
                 </div>
             </div>
             <div>
-                <div class="loyalty-section-title">ĐỔI QUÀ</div>
+                <div class="loyalty-section-title">EXCHANGE GIFTS</div>
                 <div class="redeem-list">
                     <div class="redeem-item"><span class="redeem-pts">150 pts</span><span>→ Voucher 5%</span></div>
                     <div class="redeem-item"><span class="redeem-pts">250 pts</span><span>→ Free Patch 🩹</span></div>
@@ -135,7 +135,7 @@
 <!-- FLASH BAR -->
 <div class="flash-bar">
     <span class="flash-dot"></span>
-    ⚡ STUDY NIGHT FLASH SALE — 10PM đến 2AM — Còn lại: <strong id="flash-countdown">--:--:--</strong>
+    ⚡ STUDY NIGHT FLASH SALE — 10 PM to 2 AM — Countdown: <strong id="flash-countdown">--:--:--</strong>
     <span class="flash-tag">LIMITED</span>
 </div>
 
@@ -190,7 +190,7 @@
         <div class="steps-grid">
             <div class="step-card">
                 <div class="step-img-wrap">
-                    <img src="Peel the Patch from the backing sheet.html" alt="Step 1" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                    <img src="Peel the Patch from the backing sheet.webp" alt="Step 1" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
                     <div class="step-fallback" style="display:none">01</div>
                 </div>
                 <div class="step-badge">STEP 01</div>
@@ -208,7 +208,7 @@
             </div>
             <div class="step-card">
                 <div class="step-img-wrap">
-                    <img src="Enjoy up to 8 hours of sustained focus. Stay in the zone!.html" alt="Step 3" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                    <img src="Enjoy up to 8 hours of sustained focus. Stay in the zone!.webp" alt="Step 3" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
                     <div class="step-fallback" style="display:none">03</div>
                 </div>
                 <div class="step-badge">STEP 03</div>
@@ -289,7 +289,7 @@
             <div class="review-card"><div class="r-stars">★★★★★</div><p class="r-text">"No jitters like coffee, just pure focus. Been wearing it every morning. 10/10."</p><div class="r-author"><div class="r-avatar">HH</div><span>Huy Hoang</span></div></div>
         </div>
         <div class="video-cta-bar">
-            <div><div class="vcta-tag">TREND REVIEW</div><p class="vcta-text">Xem nhóm mình test VIBE+ như thế nào 👇</p></div>
+            <div><div class="vcta-tag">TREND REVIEW</div><p class="vcta-text">Let's see how our team introduction VIBE+. 👇</p></div>
             <button class="btn-watch" onclick="openVideo()"><span class="watch-play">▶</span> Watch Our Video</button>
         </div>
     </div>
@@ -303,8 +303,8 @@
             <div class="perk-card perk-lucky" onclick="openLucky()">
                 <div class="perk-glow perk-glow-red"></div>
                 <div class="perk-top"><div class="perk-icon">🎰</div><div class="perk-label">LUCKY DRAW</div></div>
-                <h3 class="perk-title">MUA LÀ TRÚNG!</h3>
-                <p class="perk-desc">Mua sản phẩm → Quét QR → Nhập mã bí mật → Quay ngay nhận thưởng!</p>
+                <h3 class="perk-title">BUY AND WIN!</h3>
+                <p class="perk-desc">Buy the product → Scan the QR code → Enter the secret code → Spin the wheel to win a prize!</p>
                 <div class="perk-chips"><span>Free Patch</span><span>Free Box</span><span>Voucher 5–10%</span><span>Free Ship</span></div>
                 <div class="perk-cta">TRY YOUR LUCK →</div>
             </div>
@@ -312,7 +312,7 @@
                 <div class="perk-glow perk-glow-gold"></div>
                 <div class="perk-top"><div class="perk-icon">🏆</div><div class="perk-label">LOYALTY PROGRAM</div></div>
                 <h3 class="perk-title">FOCUS POINTS</h3>
-                <p class="perk-desc">Tích điểm mỗi lần mua, review, share — đổi quà xịn với hệ thống 3 tầng!</p>
+                <p class="perk-desc">Earn points every time you buy, review, or share — redeem them for amazing gifts with our 3-tiered reward system!</p>
                 <div class="perk-chips"><span>🥉 Bronze</span><span>🥈 Silver</span><span>🥇 Gold</span></div>
                 <div class="perk-cta">VIEW REWARDS →</div>
             </div>
@@ -329,7 +329,7 @@
             <h2 class="gift-title">🎁 SECRET <span class="text-gold">GIFT</span></h2>
             <p class="gift-desc">Enter the secret code printed on your product to unlock your exclusive reward.</p>
             <input type="text" id="couponInput" placeholder="ENTER CODE HERE..." class="gift-input">
-            <button onclick="checkGiftCode()" class="btn-activate">KÍCH HOẠT NGAY ⚡</button>
+            <button onclick="checkGiftCode()" class="btn-activate">Activate Now ⚡</button>
             <div id="resultMessage" class="gift-result"></div>
         </div>
     </div>
