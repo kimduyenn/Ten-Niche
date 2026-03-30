@@ -226,6 +226,15 @@
         .ingredients-grid.three {
             grid-template-columns: repeat(3, 1fr);
         }
+        /* Vitamin cards in 3-col: stack image on top */
+        .ingredients-grid.three .ing-card {
+            flex-direction: column;
+        }
+        .ingredients-grid.three .ing-img-wrap {
+            width: 100%;
+            height: 180px;
+            min-height: 180px;
+        }
 
         .ing-card {
             background:var(--surface);
@@ -251,20 +260,23 @@
 
         /* BEAUTIFUL IMAGE PLACEHOLDER */
         .ing-img-wrap {
-            width:150px; flex-shrink:0;
+            width:180px; flex-shrink:0;
             position:relative; overflow:hidden;
+            min-height:220px;
         }
         .ing-img-wrap img {
-            width:100%; height:100%; object-fit:cover;
+            width:100%; height:100%; object-fit:cover; object-position:center;
+            position:absolute; inset:0;
             transition:transform 0.5s cubic-bezier(0.16,1,0.3,1);
         }
         .ing-card:hover .ing-img-wrap img { transform:scale(1.08); }
 
         .ing-placeholder {
-            width:100%; height:100%; min-height:200px;
+            width:100%; height:100%;
+            position:absolute; inset:0;
             display:flex; flex-direction:column;
             align-items:center; justify-content:center; gap:10px;
-            position:relative; overflow:hidden;
+            overflow:hidden;
         }
         /* Gradient backgrounds per ingredient */
         .ph-caffeine   { background: linear-gradient(160deg, #1a0f02, #3d2200, #1a0f02); }
@@ -422,15 +434,15 @@
             .page-hero { padding:110px 20px 60px; }
             main { padding:60px 20px 80px; }
             .ingredients-grid, .ingredients-grid.three { grid-template-columns:1fr; }
-            .ing-img-wrap { width:120px; }
+            .ing-img-wrap { width:140px; }
+            .ingredients-grid.three .ing-img-wrap { width:100%; height:180px; }
             .footer-mini { padding:20px; flex-direction:column; gap:8px; text-align:center; }
             .hero-stats { max-width:100%; }
             .page-cta { padding:36px 20px; }
         }
         @media(max-width:520px){
             .ing-card { flex-direction:column; }
-            .ing-img-wrap { width:100%; height:180px; }
-            .ing-placeholder { min-height:180px; }
+            .ing-img-wrap { width:100% !important; height:200px !important; min-height:200px !important; }
         }
     </style>
 </head>
